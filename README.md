@@ -31,15 +31,15 @@
 You will need to follow the steps below in order to run the projects :
 
 1. Download the project files to your computer and open the solution in Visual Studio.
-2. Create the database, the tables and insert data. You can find the required tables and test data in the `Create_tables_and_insert_data.sql` file.
+2. Create the database, the tables and insert data. You can find the required tables and test data in the `Create_tables_and_insert_data.sql` script file.
 3. Change the connectionString in the `Web.config` file of the `PrintPayment_Webservice` project according to your database.
 
     _By default, the `providerName` attribute of the connectionString is set to "System.Data.SqlClient". Therefore, the project expects to interact with a SQLServer database. If you use another DBMS, change the attribute value as well._
-4. Run the projects with the green "play" button.
+    
+4. Configure the solution to automatically run both projects (Webservice and WinForm) when you run the solution. Do that by going in the solution's properties, then select `Common Properties > Startup Project` and choose the "Multiple startup projects" option. Select "Start" as action for both projects `PrintPayment_Webservice` and `PrintPayment_WinForm`. If you choose not to do that and run manually each project, ensure to run the Webservice first before the WinForm.
+5. Run the solution with the green "play" button.
 
-    _By default, the solution is configured to automatically run both projects (Webservice and WinForm). If it is not the case for you, manually run the Webservice first then the WinForm._
-
-    N. B. : By default, the Webservice is reachable at `http://localhost:54333/PrintPayment.svc`. If port `54333` is already used by another process, change the project's URL used in the properties of the `PrintPayment_Webservice` project, in the `Web` section, then change the URL in the `App.config` file of the `PrintPayment_WinForm` project as well.
+    N. B. 2 : By default, the Webservice is reachable at `http://localhost:54333/PrintPayment.svc`. If port `54333` is already used by another process, change the project's URL used in the properties of the `PrintPayment_Webservice` project, in the `Web` section, then change the URL in the `App.config` file of the `PrintPayment_WinForm` project as well.
 
 Once these 4 steps have been done, **you are ready to feel again the broke student in you and take revenge on life by giving yourself lots of printing credit !**
 
