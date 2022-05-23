@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrintPayment" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://153.109.124.35:83/droduit_cgay/PrintPayment.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://153.109.124.35:83/droduit_cgay/PrintPayment.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://153.109.124.35:83/droduit_cgay/PrintPayment.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrintPayment_GetUserByUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUID" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_GetUserByUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_GetUserByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_GetUserByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_TransferMoneyByUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyByUID" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_TransferMoneyByUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyByUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_TransferMoneyByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_TransferMoneyByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_UpdatePrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrice" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_UpdatePrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_GetConversionTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversionTable" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPayment_GetConversionTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversionTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrintPayment">
+    <wsdl:operation name="GetUserByUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/GetUserByUID" message="tns:IPrintPayment_GetUserByUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/GetUserByUIDResponse" message="tns:IPrintPayment_GetUserByUID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/GetUserByUsername" message="tns:IPrintPayment_GetUserByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/GetUserByUsernameResponse" message="tns:IPrintPayment_GetUserByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoneyByUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/TransferMoneyByUID" message="tns:IPrintPayment_TransferMoneyByUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/TransferMoneyByUIDResponse" message="tns:IPrintPayment_TransferMoneyByUID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoneyByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/TransferMoneyByUsername" message="tns:IPrintPayment_TransferMoneyByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/TransferMoneyByUsernameResponse" message="tns:IPrintPayment_TransferMoneyByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/UpdatePrice" message="tns:IPrintPayment_UpdatePrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/UpdatePriceResponse" message="tns:IPrintPayment_UpdatePrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversionTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPayment/GetConversionTable" message="tns:IPrintPayment_GetConversionTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPayment/GetConversionTableResponse" message="tns:IPrintPayment_GetConversionTable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrintPayment" type="tns:IPrintPayment">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserByUID">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/GetUserByUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/GetUserByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoneyByUID">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/TransferMoneyByUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoneyByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/TransferMoneyByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrice">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/UpdatePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversionTable">
+      <soap:operation soapAction="http://tempuri.org/IPrintPayment/GetConversionTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrintPayment">
+    <wsdl:port name="BasicHttpBinding_IPrintPayment" binding="tns:BasicHttpBinding_IPrintPayment">
+      <soap:address location="http://153.109.124.35:83/droduit_cgay/PrintPayment.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
